@@ -1,234 +1,167 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계정 삭제 안내 - Account Deletion Guide</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Deletion Guide</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
 
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
 
-        .header h1 { font-size: 2em; margin-bottom: 10px; }
-        .header p { font-size: 1.1em; opacity: 0.9; }
+    .header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
 
-        .content { padding: 40px; }
+    .header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
 
-        .section { margin-bottom: 40px; }
+    .content { padding: 40px; }
 
-        .section h2 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-        }
+    .section { margin-bottom: 40px; }
 
-        .section h3 {
-            color: #764ba2;
-            font-size: 1.2em;
-            margin: 20px 0 10px 0;
-        }
+    .section h2 {
+      color: #667eea;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
 
-        .step {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
+    .step {
+      background: #f8f9fa;
+      border-left: 4px solid #667eea;
+      padding: 15px 20px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
 
-        .step strong { color: #667eea; font-size: 1.1em; }
+    .step strong {
+      color: #667eea;
+      font-size: 1.1em;
+    }
 
-        .warning-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
+    .warning-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
 
-        .warning-box strong {
-            color: #856404;
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
+    .warning-box strong {
+      color: #856404;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
 
-        .warning-box ul { margin-left: 20px; color: #856404; }
-        .warning-box li { margin: 8px 0; }
+    .warning-box ul { margin-left: 20px; color: #856404; }
+    .warning-box li { margin: 8px 0; }
 
-        .language-divider {
-            margin: 60px 0;
-            border: none;
-            border-top: 3px dashed #e0e0e0;
-        }
+    .footer {
+      background: #f8f9fa;
+      padding: 30px;
+      text-align: center;
+      color: #6c757d;
+    }
 
-        .footer {
-            background: #f8f9fa;
-            padding: 30px;
-            text-align: center;
-            color: #6c757d;
-        }
+    .footer p { margin: 5px 0; }
 
-        .footer p { margin: 5px 0; }
-
-        @media (max-width: 768px) {
-            .container { margin: 20px auto; }
-            .header { padding: 30px 20px; }
-            .header h1 { font-size: 1.5em; }
-            .content { padding: 30px 20px; }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .container { margin: 20px auto; }
+      .header { padding: 30px 20px; }
+      .header h1 { font-size: 1.5em; }
+      .content { padding: 30px 20px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🗑️ 계정 삭제 안내</h1>
-            <p>Account Deletion Guide</p>
-        </div>
-
-        <div class="content">
-
-            <!-- English Section (lang-en) -->
-            <div class="section lang-en">
-                <h2>📱 How to Delete Your Account in the App</h2>
-
-                <div class="step">
-                    <strong>Step 1:</strong> Open the app and select the <strong>"Settings"</strong> tab at the bottom.
-                </div>
-
-                <div class="step">
-                    <strong>Step 2:</strong> Find the <strong>"Account"</strong> section at the bottom of the Settings page.
-                </div>
-
-                <div class="step">
-                    <strong>Step 3:</strong> Tap the <strong>"Delete Account"</strong> button.
-                </div>
-
-                <div class="step">
-                    <strong>Step 4:</strong> Confirm by tapping <strong>"Delete"</strong> in the confirmation dialog.
-                </div>
-
-                <div class="warning-box">
-                    <strong>⚠️ Important Notice</strong>
-                    <ul>
-                        <li>Deleting your account will <strong>permanently remove all your data</strong> and cannot be undone.</li>
-                        <li>Data that will be deleted: Favorites, voting history, diamonds, achievements, subscription information, etc.</li>
-                        <li>Once deleted, you cannot recover the same data.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section lang-en">
-                <h2>🔐 Data Collection Information</h2>
-                <p>Our app uses Firebase Anonymous Authentication and collects the following data:</p>
-                <ul style="margin-left: 30px; margin-top: 15px;">
-                    <li><strong>Device or Other IDs:</strong> Firebase anonymous ID for anonymous user identification</li>
-                    <li><strong>Advertising ID:</strong> Google Advertising ID (AAID) for personalized ads</li>
-                    <li><strong>App Usage Data:</strong> App usage patterns and analytics data</li>
-                </ul>
-            </div>
-
-            <div class="section lang-en">
-                <h2>💬 Contact Us</h2>
-                <p>If you have any questions about account deletion or need assistance, please contact us at:</p>
-                <p style="margin-top: 15px; font-weight: bold; color: #667eea; font-size: 1.1em;">
-                    wallpaperengine119@gmail.com
-                </p>
-            </div>
-
-            <hr class="language-divider lang-both">
-
-            <!-- 한국어 섹션 (lang-ko) -->
-            <div class="section lang-ko">
-                <h2>📱 앱에서 계정 삭제하는 방법</h2>
-
-                <div class="step">
-                    <strong>1단계:</strong> 앱을 실행하고 하단의 <strong>"설정"</strong> 탭을 선택하세요.
-                </div>
-
-                <div class="step">
-                    <strong>2단계:</strong> 설정 페이지 하단의 <strong>"계정"</strong> 섹션을 찾으세요.
-                </div>
-
-                <div class="step">
-                    <strong>3단계:</strong> <strong>"계정 삭제"</strong> 버튼을 누르세요.
-                </div>
-
-                <div class="step">
-                    <strong>4단계:</strong> 확인 대화상자에서 <strong>"삭제"</strong>를 눌러 확인하세요.
-                </div>
-
-                <div class="warning-box">
-                    <strong>⚠️ 주의사항</strong>
-                    <ul>
-                        <li>계정을 삭제하면 <strong>모든 데이터가 영구적으로 삭제</strong>되며 복구할 수 없습니다.</li>
-                        <li>삭제되는 데이터: 즐겨찾기, 투표 기록, 다이아몬드, 업적, 구독 정보 등</li>
-                        <li>계정 삭제 후에는 같은 데이터를 복구할 수 없습니다.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section lang-ko">
-                <h2>🔐 수집되는 데이터 정보</h2>
-                <p>우리 앱은 Firebase 익명 인증을 사용하며, 다음과 같은 데이터를 수집합니다:</p>
-                <ul style="margin-left: 30px; margin-top: 15px;">
-                    <li><strong>기기 또는 기타 ID:</strong> 익명 사용자 식별을 위한 Firebase 익명 ID</li>
-                    <li><strong>광고 ID:</strong> 개인화된 광고 제공을 위한 Google 광고 ID (AAID)</li>
-                    <li><strong>앱 사용 데이터:</strong> 앱 사용 패턴 및 분석 데이터</li>
-                </ul>
-            </div>
-
-            <div class="section lang-ko">
-                <h2>💬 문의하기</h2>
-                <p>계정 삭제에 관한 문의사항이나 도움이 필요하신 경우, 아래 이메일로 연락해주세요:</p>
-                <p style="margin-top: 15px; font-weight: bold; color: #667eea; font-size: 1.1em;">
-                    wallpaperengine119@gmail.com
-                </p>
-            </div>
-
-        </div>
-
-        <div class="footer">
-            <p><strong>Last Updated:</strong> January 2026</p>
-            <p>© 2026 Wallpaper Engineer. All rights reserved.</p>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>🗑️ Account Deletion Guide</h1>
+      <p>How to delete your account and data</p>
     </div>
 
-    <!-- 언어 자동 감지: 한국어면 한국어만, 그 외는 영어만 표시 (기본 영어) -->
-    <script>
-        (function () {
-            const lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-            const isKo = lang.startsWith('ko');
+    <div class="content">
+      <div class="section">
+        <h2>📱 How to Delete Your Account in the App</h2>
 
-            document.querySelectorAll('.lang-ko').forEach(el => el.style.display = isKo ? '' : 'none');
-            document.querySelectorAll('.lang-en').forEach(el => el.style.display = isKo ? 'none' : '');
-            document.querySelectorAll('.lang-both').forEach(el => el.style.display = 'none'); // 구분선 숨김
-        })();
-    </script>
+        <div class="step">
+          <strong>Step 1:</strong> Open the app and select the <strong>"Settings"</strong> tab at the bottom.
+        </div>
+
+        <div class="step">
+          <strong>Step 2:</strong> Find the <strong>"Account"</strong> section at the bottom of the Settings page.
+        </div>
+
+        <div class="step">
+          <strong>Step 3:</strong> Tap the <strong>"Delete Account"</strong> button.
+        </div>
+
+        <div class="step">
+          <strong>Step 4:</strong> Confirm by tapping <strong>"Delete"</strong> in the confirmation dialog.
+        </div>
+
+        <div class="warning-box">
+          <strong>⚠️ Important Notice</strong>
+          <ul>
+            <li>Deleting your account will <strong>permanently remove all your data</strong> and cannot be undone.</li>
+            <li>Data that will be deleted: Favorites, voting history, diamonds, achievements, subscription information, etc.</li>
+            <li>Once deleted, you cannot recover the same data.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🔐 Data Collection Information</h2>
+        <p>Our app uses Firebase Anonymous Authentication and may collect the following data:</p>
+        <ul style="margin-left: 30px; margin-top: 15px;">
+          <li><strong>Device or Other IDs:</strong> Firebase anonymous ID for anonymous user identification</li>
+          <li><strong>Advertising ID:</strong> Google Advertising ID (AAID) for ads and measurement</li>
+          <li><strong>App Usage Data:</strong> App usage patterns and analytics data</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>💬 Contact Us</h2>
+        <p>If you have any questions about account deletion or need assistance, please contact us at:</p>
+        <p style="margin-top: 15px; font-weight: bold; color: #667eea; font-size: 1.1em;">
+          wallpaperengine119@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Last Updated:</strong> January 2026</p>
+      <p>© 2026 Your App Name. All rights reserved.</p>
+    </div>
+  </div>
 </body>
 </html>
